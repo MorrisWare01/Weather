@@ -12,7 +12,7 @@ import java.util.List;
  * Created by idea on 2016-09-29.
  */
 public class CityDao {
-    private static final String filePath = "/data/data/com.win.dragrecyclerview/files/cities.db";
+    private static final String filePath = "/data/data/com.win.weather/files/cities.db";
 
     public static List<CityBean> queryCity(String key) {
         List<CityBean> mList = new ArrayList<>();

@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.3"
     useLibrary 'org.apache.http.legacy'
     defaultConfig {
-        applicationId "com.win.dragrecyclerview"
+        applicationId "com.win.weather"
         minSdkVersion 14
         targetSdkVersion 23
         versionCode 1
