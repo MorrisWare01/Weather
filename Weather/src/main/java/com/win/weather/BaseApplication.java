@@ -16,5 +16,4 @@ public class BaseApplication extends Application {
         cityManageDao = new CityManageDao(this);
     }
 
-
 }
