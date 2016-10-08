@@ -166,7 +166,7 @@ public class CityManageActivity extends AppCompatActivity implements View.OnClic
                 public void run() {
                     refreshAll();
                 }
-            }, 1500);
+            }, 1000);
         } else {
             Toast.makeText(this, "需要连接网络", Toast.LENGTH_SHORT).show();
         }
