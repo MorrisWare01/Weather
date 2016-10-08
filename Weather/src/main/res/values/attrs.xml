@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LifeIndexView">
+        <attr name="life_index_pic" format="reference" />
+        <attr name="life_index_name" format="string" />
+        <attr name="life_index_short_text" format="string" />
+        <attr name="life_index_long_text" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="WeatherInfoView">
+        <attr name="weather_info_pic" format="reference" />
+        <attr name="weather_info_name" format="string" />
+    </declare-styleable>
+
+</resources>

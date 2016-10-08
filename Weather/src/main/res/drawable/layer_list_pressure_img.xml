@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/pressure_img" />
+    <item>
+        <rotate
+            android:fromDegrees="-40"
+            android:pivotX="35"
+            android:pivotY="30">
+            <bitmap android:src="@drawable/pressure_pointer" />
+
+        </rotate>
+    </item>
+</layer-list>

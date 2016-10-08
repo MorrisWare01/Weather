@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000</color>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="city_item_bg">#5000</color>
+    <color name="city_add_edit_bg">#5000</color>
+    <color name="text_color">#fff</color>
+    <color name="span_color">#4fff</color>
+
+    <color name="green">#dd00ff00</color>
+    <color name="yellow">#ddFFFF00</color>
+    <color name="orange">#ddFFA500</color>
+    <color name="red">#ddff0000</color>
+    <color name="purple">#ddA020F0</color>
+    <color name="dark_red">#dd8b0000</color>
+
+</resources>
