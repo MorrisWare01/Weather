@@ -49,6 +49,7 @@
                         android:background="@drawable/shape_aqi_bg"
                         android:gravity="center"
                         android:lines="1"
+                        android:text="？"
                         android:textColor="@color/text_color"
                         android:textSize="25sp" />
 
@@ -59,6 +60,7 @@
                         android:background="#e8ab29"
                         android:paddingLeft="8dp"
                         android:paddingRight="8dp"
+                        android:text="暂无"
                         android:textColor="@color/text_color"
                         android:textSize="12sp" />
                 </LinearLayout>

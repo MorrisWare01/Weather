@@ -2,6 +2,8 @@ package com.win.weather;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -28,6 +30,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
+
 
 public class MainActivity extends AppCompatActivity implements
         ViewPager.OnPageChangeListener, View.OnClickListener {
@@ -139,6 +142,7 @@ public class MainActivity extends AppCompatActivity implements
         }
     }
 
+
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
         if (mCityList.size() > 1) {
@@ -161,6 +165,27 @@ public class MainActivity extends AppCompatActivity implements
     public void onPageScrollStateChanged(int state) {
 
     }
+
+    Handler handler = new Handler() {
+
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case 1:
+                    Toast.makeText(getApplicationContext(), "QQ分享成功", Toast.LENGTH_LONG).show();
+                    break;
+                case 2:
+                    Toast.makeText(getApplicationContext(), "取消分享", Toast.LENGTH_LONG).show();
+                    break;
+                case 3:
+                    Toast.makeText(getApplicationContext(), "分享失败" + msg.obj, Toast.LENGTH_LONG).show();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+    };
 
     private class WeatherPagerAdapter extends FragmentPagerAdapter {
 

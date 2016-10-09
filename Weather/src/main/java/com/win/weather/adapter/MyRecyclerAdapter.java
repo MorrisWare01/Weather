@@ -261,7 +261,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.It
     public void setAddItemVisibility(boolean isEdited) {
         if (mList.size() < 9) {
             if (isEdited) {
-                notifyItemRemoved(mList.size());
+                notifyDataSetChanged();
             } else {
                 notifyDataSetChanged();
             }

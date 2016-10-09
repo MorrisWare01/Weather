@@ -187,6 +187,8 @@ public class MainFragment extends Fragment implements View.OnClickListener, Swip
             String qlty = aqiBean.city.qlty;
             if (aqi != null) {
                 tv_aqi.setText(aqi);
+            } else {
+                tv_aqi.setText("?");
             }
             if (qlty != null) {
                 if (qlty.equals("优")) {
@@ -205,6 +207,8 @@ public class MainFragment extends Fragment implements View.OnClickListener, Swip
                     tv_aqi_txt.setBackgroundColor(0x00000000);
                 }
                 tv_aqi_txt.setText(qlty.length() < 3 ? "空气" + qlty : qlty);
+            } else {
+                tv_aqi_txt.setText("暂无");
             }
         }
     }
