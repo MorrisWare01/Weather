@@ -3,7 +3,6 @@ package com.win.weather;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.ImageView;
 
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationListener;
@@ -14,7 +13,6 @@ import com.win.weather.utils.DBUtils;
 import com.win.weather.utils.PrefUtils;
 
 public class SplashActivity extends AppCompatActivity {
-    private ImageView imageView;
     private AMapLocationUtils locationUtils;
     private CityManageDao dao;
     private boolean init;
@@ -23,13 +21,11 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        imageView = (ImageView) findViewById(R.id.imageView);
         dao = ((BaseApplication) getApplication()).cityManageDao;
         init = PrefUtils.getBoolean(this, "init", false);
         DBUtils.copyDB(this, "cities.db");
         initLocation();
     }
-
 
     @Override
     protected void onDestroy() {
@@ -92,8 +88,8 @@ public class SplashActivity extends AppCompatActivity {
 
         @Override
         public void onLocationChanged(AMapLocation aMapLocation) {
-            String city = aMapLocation.getCity().substring(0, aMapLocation.getCity().lastIndexOf("市"));
             if (aMapLocation != null) {
+                String city = aMapLocation.getCity().substring(0, aMapLocation.getCity().lastIndexOf("市"));
                 if (aMapLocation.getErrorCode() == 0) {
                     onSuccess(city);
                 } else {

@@ -119,7 +119,7 @@ public class AddCityActivity extends AppCompatActivity implements TextWatcher {
             alertDialog.cancel();
             if (aMapLocation != null) {
                 if (aMapLocation.getErrorCode() == 0) {
-                    String city = locationUtils.formatCity(aMapLocation.getAddress());
+                    String city = aMapLocation.getCity().substring(0, aMapLocation.getCity().lastIndexOf("市"));
                     CityManageBean bean = new CityManageBean();
                     bean.setName("自动定位");
                     bean.setCity(city);

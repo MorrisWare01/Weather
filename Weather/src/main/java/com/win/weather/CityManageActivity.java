@@ -37,6 +37,8 @@ import com.win.weather.utils.NetworkUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class CityManageActivity extends AppCompatActivity implements View.OnClickListener, OnStatusChangeListener {
     private RecyclerView mRecyclerView;
@@ -295,8 +297,30 @@ public class CityManageActivity extends AppCompatActivity implements View.OnClic
         if (isEdited) {
             doEdit();
         } else {
-            if (mCityList.size() > 0)
+            if (mCityList.size() > 0) {
                 startActivity(new Intent(this, MainActivity.class));
+                finish();
+            } else {
+                exitBy2Click();
+            }
+        }
+    }
+
+    private Boolean isExit = false;
+
+    private void exitBy2Click() {
+        Timer timer = null;
+        if (!isExit) {
+            isExit = true;
+            Toast.makeText(this, "请添加城市或再按一次退出程序", Toast.LENGTH_SHORT).show();
+            timer = new Timer();
+            timer.schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    isExit = false;
+                }
+            }, 2000);
+        } else {
             finish();
         }
     }
