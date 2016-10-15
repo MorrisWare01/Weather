@@ -1,7 +1,9 @@
-package com.win.weather.adapter;
+package com.win.weather.recyclerview;
 
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
+
+import com.win.weather.adapter.MyRecyclerAdapter;
 
 /**
  * Created by idea on 2016-09-27.

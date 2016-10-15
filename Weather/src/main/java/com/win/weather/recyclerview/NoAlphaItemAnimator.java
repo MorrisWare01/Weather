@@ -1,4 +1,4 @@
-package com.win.weather.adapter;
+package com.win.weather.recyclerview;
 
 import android.support.annotation.NonNull;
 import android.support.v4.animation.AnimatorCompatHelper;

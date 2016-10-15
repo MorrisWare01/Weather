@@ -1,4 +1,4 @@
-package com.win.weather.adapter;
+package com.win.weather.recyclerview;
 
 public interface ItemTouchHelperAdapter {
     boolean onItemMove(int fromPosition, int toPosition);

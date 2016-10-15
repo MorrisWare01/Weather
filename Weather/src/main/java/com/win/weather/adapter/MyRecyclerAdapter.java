@@ -18,6 +18,8 @@ import android.widget.TextView;
 import com.win.weather.R;
 import com.win.weather.bean.CityManageBean;
 import com.win.weather.db.CityManageDao;
+import com.win.weather.recyclerview.ItemTouchHelperAdapter;
+import com.win.weather.recyclerview.OnStatusChangeListener;
 import com.win.weather.utils.PrefUtils;
 
 import java.util.List;

@@ -44,8 +44,7 @@ public class SplashActivity extends AppCompatActivity {
         locationUtils.startLocation();
     }
 
-    private void onSuccess(AMapLocation aMapLocation) {
-        String city = locationUtils.formatCity(aMapLocation.getAddress());
+    private void onSuccess(String city) {
         if (init) {
             if (dao.findAll().size() != 0) {
                 CityManageBean bean = dao.findLocation();
@@ -93,9 +92,10 @@ public class SplashActivity extends AppCompatActivity {
 
         @Override
         public void onLocationChanged(AMapLocation aMapLocation) {
+            String city = aMapLocation.getCity().substring(0, aMapLocation.getCity().lastIndexOf("市"));
             if (aMapLocation != null) {
                 if (aMapLocation.getErrorCode() == 0) {
-                    onSuccess(aMapLocation);
+                    onSuccess(city);
                 } else {
                     onFail();
                 }

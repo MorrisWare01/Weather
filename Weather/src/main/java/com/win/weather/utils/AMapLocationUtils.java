@@ -35,27 +35,4 @@ public class AMapLocationUtils {
         mLocationClient.onDestroy();//销毁定位客户端，同时销毁本地定位服务。
     }
 
-    public String formatCity(String addr) {
-        String city = null;
-        if (addr.contains("北京市") && addr.contains("区")) {
-            city = addr.substring(addr.indexOf("市") + 1, addr.indexOf("区"));
-        } else if (addr.contains("县")) {
-            city = addr.substring(addr.indexOf("市") + 1, addr.indexOf("县"));
-        } else {
-            int start = addr.indexOf("市");
-            int end = addr.lastIndexOf("市");
-            if (start == end) {
-                if (addr.contains("省")) {
-                    city = addr.substring(addr.indexOf("省") + 1,
-                            addr.indexOf("市"));
-                } else if (addr.contains("市")) {
-                    city = addr.substring(0, addr.indexOf("市"));
-                }
-            } else {
-                city = addr.substring(addr.indexOf("市") + 1,
-                        addr.lastIndexOf("市"));
-            }
-        }
-        return city;
-    }
 }

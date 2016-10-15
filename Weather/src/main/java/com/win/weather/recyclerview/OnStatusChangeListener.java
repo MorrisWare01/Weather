@@ -1,4 +1,4 @@
-package com.win.weather.adapter;
+package com.win.weather.recyclerview;
 
 /**
  * Created by idea on 2016-09-28.
