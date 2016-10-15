@@ -10,6 +10,7 @@ import com.win.weather.bean.CityManageBean;
 import com.win.weather.db.CityManageDao;
 import com.win.weather.utils.AMapLocationUtils;
 import com.win.weather.utils.DBUtils;
+import com.win.weather.utils.NetworkUtils;
 import com.win.weather.utils.PrefUtils;
 
 public class SplashActivity extends AppCompatActivity {
@@ -24,7 +25,11 @@ public class SplashActivity extends AppCompatActivity {
         dao = ((BaseApplication) getApplication()).cityManageDao;
         init = PrefUtils.getBoolean(this, "init", false);
         DBUtils.copyDB(this, "cities.db");
-        initLocation();
+        if (NetworkUtils.isNetworkConnected(this)) {
+            initLocation();
+        } else {
+            onFail();
+        }
     }
 
     @Override
