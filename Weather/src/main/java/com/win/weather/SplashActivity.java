@@ -89,8 +89,8 @@ public class SplashActivity extends AppCompatActivity {
         @Override
         public void onLocationChanged(AMapLocation aMapLocation) {
             if (aMapLocation != null) {
-                String city = aMapLocation.getCity().substring(0, aMapLocation.getCity().lastIndexOf("市"));
                 if (aMapLocation.getErrorCode() == 0) {
+                    String city = aMapLocation.getCity().substring(0, aMapLocation.getCity().lastIndexOf("市"));
                     onSuccess(city);
                 } else {
                     onFail();
