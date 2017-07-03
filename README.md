@@ -6,6 +6,4 @@ http://fir.im/caml?release_id=5801e302959d690fff000490
 
 ###界面
 
-![Alt text](https://github.com/MorrisWare01/Weather/blob/master/Screenshot/Screenshot_1.png)
-
-![Alt text](https://github.com/MorrisWare01/Weather/blob/master/Screenshot/Screenshot_2.png)
+<img src="https://github.com/MorrisWare01/Weather/blob/master/Screenshot/Screenshot_1.png" width = "280"/> <img src="https://github.com/MorrisWare01/Weather/blob/master/Screenshot/Screenshot_2.png" width = "280"/>
